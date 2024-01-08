@@ -6,26 +6,26 @@ import jakarta.persistence.*;
 public class Family {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @Column(name = "car_id", nullable = false)
-    private Long carId;
+    private String carId;
 
     // Getters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public Long getCarId() {
+    public String getCarId() {
         return carId;
     }
 
     // Setters
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public void setCarId(Long carId) {
+    public void setCarId(String carId) {
         this.carId = carId;
     }
 }

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class CarAccountBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @Column(nullable = false)
     private LocalDate date;
@@ -19,10 +19,10 @@ public class CarAccountBook {
     private Double amount;
 
     @Column(name = "user_id", nullable = false)
-    private Long userId;
+    private String userId;
 
     // Getters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -38,12 +38,12 @@ public class CarAccountBook {
         return amount;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
     // Setters
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -59,7 +59,7 @@ public class CarAccountBook {
         this.amount = amount;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 }
