@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String userId;
 
     @Column(nullable = false)
     private String name;
@@ -22,7 +22,7 @@ public class Users {
 
     // Getters
     public String getId() {
-        return id;
+        return userId;
     }
 
     public String getName() {
@@ -42,8 +42,8 @@ public class Users {
     }
 
     // Setters
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String userId) {
+        this.userId = userId;
     }
 
     public void setName(String name) {

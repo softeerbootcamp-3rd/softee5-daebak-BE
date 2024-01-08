@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Communication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String communicationId;
 
     @Column(name = "communication_type", nullable = false)
     private String communicationType; // "자랑하기", "쪼르기", "지켜주기"
@@ -22,7 +22,7 @@ public class Communication {
 
     // Getters
     public String getId() {
-        return id;
+        return communicationId;
     }
 
     public String getCommunicationType() {
@@ -42,8 +42,8 @@ public class Communication {
     }
 
     // Setters
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String communicationId) {
+        this.communicationId = communicationId;
     }
 
     public void setCommunicationType(String communicationType) {

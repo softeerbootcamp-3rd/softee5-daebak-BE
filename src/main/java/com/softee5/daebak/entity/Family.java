@@ -6,14 +6,14 @@ import jakarta.persistence.*;
 public class Family {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String familyId;
 
     @Column(name = "car_id", nullable = false)
     private String carId;
 
     // Getters
     public String getId() {
-        return id;
+        return familyId;
     }
 
     public String getCarId() {
@@ -21,8 +21,8 @@ public class Family {
     }
 
     // Setters
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String familyId) {
+        this.familyId = familyId;
     }
 
     public void setCarId(String carId) {

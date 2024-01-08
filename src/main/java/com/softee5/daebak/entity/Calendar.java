@@ -8,7 +8,7 @@ import java.time.LocalTime;
 public class Calendar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String calendarId;
 
     @Column(name = "user_id", nullable = false)
     private String userId;
@@ -30,7 +30,7 @@ public class Calendar {
 
     // Getters
     public String getId() {
-        return id;
+        return calendarId;
     }
 
     public String getUserId() {
@@ -54,8 +54,8 @@ public class Calendar {
     }
 
     // Setters
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String calendarId) {
+        this.calendarId = calendarId;
     }
 
     public void setUserId(String userId) {
