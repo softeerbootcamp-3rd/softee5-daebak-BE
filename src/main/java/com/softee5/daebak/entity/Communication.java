@@ -11,6 +11,9 @@ public class Communication {
     @Column(name = "communication_type", nullable = false)
     private String communicationType; // "자랑하기", "쪼르기", "지켜주기"
 
+    @Column(name = "action_type", nullable = false)
+    private String actionType; // "주유", "세차", "수리"
+
     @Column(nullable = false)
     private Integer count;
 
