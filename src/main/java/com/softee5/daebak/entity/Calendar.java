@@ -8,10 +8,13 @@ import java.time.LocalTime;
 public class Calendar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String calendarId;
 
     @Column(name = "user_id", nullable = false)
-    private Long userId;
+    private String userId;
+
+    @Column(name = "repeat_time", nullable = false)
+    private String repeatTime;
 
     @Column(nullable = false)
     private LocalDate date;
@@ -26,11 +29,11 @@ public class Calendar {
     private LocalTime reminderTime;
 
     // Getters
-    public Long getId() {
-        return id;
+    public String getId() {
+        return calendarId;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -51,11 +54,11 @@ public class Calendar {
     }
 
     // Setters
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(String calendarId) {
+        this.calendarId = calendarId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

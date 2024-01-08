@@ -6,23 +6,26 @@ import jakarta.persistence.*;
 public class Communication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String communicationId;
 
     @Column(name = "communication_type", nullable = false)
     private String communicationType; // "자랑하기", "쪼르기", "지켜주기"
+
+    @Column(name = "action_type", nullable = false)
+    private String actionType; // "주유", "세차", "수리"
 
     @Column(nullable = false)
     private Integer count;
 
     @Column(name = "user_id", nullable = false)
-    private Long userId;
+    private String userId;
 
     @Column
     private String comment;
 
     // Getters
-    public Long getId() {
-        return id;
+    public String getId() {
+        return communicationId;
     }
 
     public String getCommunicationType() {
@@ -33,7 +36,7 @@ public class Communication {
         return count;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -42,8 +45,8 @@ public class Communication {
     }
 
     // Setters
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(String communicationId) {
+        this.communicationId = communicationId;
     }
 
     public void setCommunicationType(String communicationType) {
@@ -54,7 +57,7 @@ public class Communication {
         this.count = count;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
