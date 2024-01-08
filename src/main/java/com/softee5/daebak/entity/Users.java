@@ -20,6 +20,9 @@ public class Users {
     @Column(name = "car_id")
     private String carId;
 
+    @Column(name = "role")
+    private String role;
+
     // Getters
     public String getId() {
         return userId;
