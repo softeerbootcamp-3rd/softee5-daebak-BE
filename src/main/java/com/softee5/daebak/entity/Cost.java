@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-public class CarAccountBook {
+public class Cost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String carAccountBookId;
