@@ -16,7 +16,7 @@ public class Communication {
     @Column(name = "cm_action", nullable = false)
     private String actionType; // "주유", "세차", "수리"
 
-    @Column(name = "cm_count", nullable = false)
+    @Column(name = "cm_count", nullable = true)
     private Integer count;
 
     @Column(name = "user_id", nullable = false)
