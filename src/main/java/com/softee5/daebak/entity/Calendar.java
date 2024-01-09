@@ -1,13 +1,16 @@
 package com.softee5.daebak.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
 public class Calendar {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String calendarId;
 
     @Column(name = "user_id", nullable = false)
