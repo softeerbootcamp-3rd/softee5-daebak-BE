@@ -19,7 +19,7 @@ public class Communication {
     private Integer count;
 
     @Column(name = "user_id", nullable = false)
-    private String userId;
+    private Integer userId;
 
     @Column
     private String comment;
@@ -41,7 +41,7 @@ public class Communication {
         return count;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -62,7 +62,7 @@ public class Communication {
         this.count = count;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
