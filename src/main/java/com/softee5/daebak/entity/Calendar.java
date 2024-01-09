@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.time.LocalTime;
 
 @Entity
@@ -20,7 +21,7 @@ public class Calendar {
     private String repeatTime;
 
     @Column(name = "cal_date",nullable = false)
-    private LocalDate date;
+    private Date date;
 
     @Column(name = "cal_start", nullable = false)
     private LocalTime startTime;
@@ -40,7 +41,7 @@ public class Calendar {
         return userId;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -65,7 +66,7 @@ public class Calendar {
         this.userId = userId;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
