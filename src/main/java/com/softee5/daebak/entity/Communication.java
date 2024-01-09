@@ -1,11 +1,13 @@
 package com.softee5.daebak.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Communication {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String communicationId;
 
     @Column(name = "communication_type", nullable = false)
@@ -32,6 +34,10 @@ public class Communication {
         return communicationType;
     }
 
+    public String getActionType() {
+        return actionType;
+    }
+
     public Integer getCount() {
         return count;
     }
@@ -49,9 +55,9 @@ public class Communication {
         this.communicationId = communicationId;
     }
 
-    public void setCommunicationType(String communicationType) {
-        this.communicationType = communicationType;
-    }
+    public void setCommunicationType(String communicationType) {this.communicationType = communicationType;}
+
+    public void setActionType(String actionType) {this.actionType = actionType;}
 
     public void setCount(Integer count) {
         this.count = count;

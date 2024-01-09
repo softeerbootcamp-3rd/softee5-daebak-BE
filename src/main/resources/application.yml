@@ -17,4 +17,4 @@ spring:
     defer-datasource-initialization: true
 
 server:
-  port: 80
+  port: 8080
