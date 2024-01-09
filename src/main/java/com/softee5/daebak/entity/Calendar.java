@@ -10,24 +10,25 @@ import java.time.LocalTime;
 public class Calendar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cal_id")
     private Integer calendarId;
 
     @Column(name = "user_id", nullable = false)
     private Integer userId;
 
-    @Column(name = "repeat_time", nullable = false)
+    @Column(name = "cal_repeat", nullable = false)
     private String repeatTime;
 
-    @Column(nullable = false)
+    @Column(name = "cal_date",nullable = false)
     private LocalDate date;
 
-    @Column(name = "start_time", nullable = false)
+    @Column(name = "cal_start", nullable = false)
     private LocalTime startTime;
 
-    @Column(name = "end_time", nullable = false)
+    @Column(name = "cal_end", nullable = false)
     private LocalTime endTime;
 
-    @Column(name = "reminder_time")
+    @Column(name = "cal_remind")
     private LocalTime reminderTime;
 
     // Getters
