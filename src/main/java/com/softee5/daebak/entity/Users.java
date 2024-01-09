@@ -6,9 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Users {
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer userId;
 
     @Column(nullable = false)
     private String name;
@@ -26,7 +25,7 @@ public class Users {
     private String role;
 
     // Getters
-    public String getId() {
+    public Integer getId() {
         return userId;
     }
 
@@ -47,7 +46,7 @@ public class Users {
     }
 
     // Setters
-    public void setId(String userId) {
+    public void setId(Integer userId) {
         this.userId = userId;
     }
 

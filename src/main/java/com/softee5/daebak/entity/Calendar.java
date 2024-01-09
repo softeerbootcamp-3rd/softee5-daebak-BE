@@ -9,9 +9,8 @@ import java.time.LocalTime;
 @Entity
 public class Calendar {
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String calendarId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer calendarId;
 
     @Column(name = "user_id", nullable = false)
     private String userId;
@@ -32,7 +31,7 @@ public class Calendar {
     private LocalTime reminderTime;
 
     // Getters
-    public String getId() {
+    public Integer getId() {
         return calendarId;
     }
 
@@ -57,7 +56,7 @@ public class Calendar {
     }
 
     // Setters
-    public void setId(String calendarId) {
+    public void setId(Integer calendarId) {
         this.calendarId = calendarId;
     }
 
