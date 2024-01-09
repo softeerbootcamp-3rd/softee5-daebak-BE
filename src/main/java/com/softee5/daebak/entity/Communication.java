@@ -7,21 +7,22 @@ import org.hibernate.annotations.GenericGenerator;
 public class Communication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cm_id")
     private Integer communicationId;
 
-    @Column(name = "communication_type", nullable = false)
+    @Column(name = "cm_type", nullable = false)
     private String communicationType; // "자랑하기", "쪼르기", "지켜주기"
 
-    @Column(name = "action_type", nullable = false)
+    @Column(name = "cm_action", nullable = false)
     private String actionType; // "주유", "세차", "수리"
 
-    @Column(nullable = false)
+    @Column(name = "cm_count", nullable = false)
     private Integer count;
 
     @Column(name = "user_id", nullable = false)
     private Integer userId;
 
-    @Column
+    @Column(name = "cm_text")
     private String comment;
 
     // Getters

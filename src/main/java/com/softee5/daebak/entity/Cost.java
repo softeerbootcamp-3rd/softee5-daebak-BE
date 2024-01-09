@@ -9,15 +9,16 @@ import java.time.LocalDate;
 public class Cost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cost_id")
     private Integer costId;
 
-    @Column(nullable = false)
+    @Column(name = "cost_date", nullable = false)
     private LocalDate date;
 
-    @Column(name = "expense_type", nullable = false)
+    @Column(name = "cost_type", nullable = false)
     private String expenseType; // 예: "주유비", "세차비", "수리비"
 
-    @Column(nullable = false)
+    @Column(name = "cost_total",nullable = false)
     private Double amount;
 
     @Column(name = "user_id", nullable = false)
