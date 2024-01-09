@@ -21,7 +21,7 @@ public class Cost {
     private Double amount;
 
     @Column(name = "user_id", nullable = false)
-    private String userId;
+    private Integer userId;
 
     // Getters
     public Integer getId() {
@@ -40,7 +40,7 @@ public class Cost {
         return amount;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -61,7 +61,7 @@ public class Cost {
         this.amount = amount;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 }

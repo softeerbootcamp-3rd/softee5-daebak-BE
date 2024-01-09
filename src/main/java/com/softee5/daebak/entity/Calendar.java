@@ -13,7 +13,7 @@ public class Calendar {
     private Integer calendarId;
 
     @Column(name = "user_id", nullable = false)
-    private String userId;
+    private Integer userId;
 
     @Column(name = "repeat_time", nullable = false)
     private String repeatTime;
@@ -35,7 +35,7 @@ public class Calendar {
         return calendarId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -60,7 +60,7 @@ public class Calendar {
         this.calendarId = calendarId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

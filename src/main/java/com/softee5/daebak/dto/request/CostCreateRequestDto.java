@@ -12,5 +12,5 @@ public class CostCreateRequestDto {
     private String expenseType;
     private Double amount;
     private LocalDate date;
-    private String userId;
+    private Integer userId;
 }
