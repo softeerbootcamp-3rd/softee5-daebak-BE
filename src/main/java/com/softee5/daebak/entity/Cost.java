@@ -3,7 +3,7 @@ package com.softee5.daebak.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Cost {
@@ -13,7 +13,7 @@ public class Cost {
     private Integer costId;
 
     @Column(name = "cost_date", nullable = false)
-    private LocalDate date;
+    private Date date;
 
     @Column(name = "cost_type", nullable = false)
     private String expenseType; // 예: "주유비", "세차비", "수리비"
@@ -29,7 +29,7 @@ public class Cost {
         return costId;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -50,7 +50,7 @@ public class Cost {
         this.costId = costId;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

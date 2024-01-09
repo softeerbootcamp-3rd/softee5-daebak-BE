@@ -1,6 +1,7 @@
 package com.softee5.daebak.dto.request;
 
-import java.time.LocalDate;
+import java.util.Date;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,6 @@ import lombok.Setter;
 public class CostCreateRequestDto {
     private String expenseType;
     private Double amount;
-    private LocalDate date;
+    private Date date;
     private Integer userId;
 }
