@@ -6,9 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Communication {
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String communicationId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer communicationId;
 
     @Column(name = "communication_type", nullable = false)
     private String communicationType; // "자랑하기", "쪼르기", "지켜주기"
@@ -26,7 +25,7 @@ public class Communication {
     private String comment;
 
     // Getters
-    public String getId() {
+    public Integer getId() {
         return communicationId;
     }
 
@@ -51,7 +50,7 @@ public class Communication {
     }
 
     // Setters
-    public void setId(String communicationId) {
+    public void setId(Integer communicationId) {
         this.communicationId = communicationId;
     }
 

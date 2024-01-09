@@ -8,10 +8,8 @@ import java.time.LocalDate;
 @Entity
 public class Cost {
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-
-    private String carAccountBookId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer costId;
 
     @Column(nullable = false)
     private LocalDate date;
@@ -26,8 +24,8 @@ public class Cost {
     private String userId;
 
     // Getters
-    public String getId() {
-        return carAccountBookId;
+    public Integer getId() {
+        return costId;
     }
 
     public LocalDate getDate() {
@@ -47,8 +45,8 @@ public class Cost {
     }
 
     // Setters
-    public void setId(String carAccountBookId) {
-        this.carAccountBookId = carAccountBookId;
+    public void setId(Integer costId) {
+        this.costId = costId;
     }
 
     public void setDate(LocalDate date) {
